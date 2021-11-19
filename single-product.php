@@ -33,19 +33,18 @@ get_header();
 		<main id="primary" class="site-main">
 
 
+        <?php
+// The Query
+$query = new WP_Query(array('post_type' => 'product'));
+query_posts( $query );
 
-<?php
-while ( have_posts() ) :
-	the_post();
+// The Loop
+while ( $query->have_posts() ) : $query->the_post();  
+    the_post_thumbnail();
+endwhile;
 
-	get_template_part( 'template-parts/content', 'page' );
-
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
-
-endwhile; // End of the loop.
+// Reset Query
+wp_reset_query();
 ?>
 
 </main>

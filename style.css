@@ -66,6 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap');
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -115,7 +116,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-	font-family: monospace, monospace;
+	font-family: 'Rubik', sans-serif;
 	font-size: 1em;
 }
 
@@ -154,7 +155,7 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: 'Rubik', sans-serif;
 	font-size: 1em;
 }
 
@@ -403,8 +404,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 1rem;
+	font-family: 'Rubik', sans-serif;	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -438,8 +438,7 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", courier, monospace;
-	line-height: 1.6;
+	font-family: 'Rubik', sans-serif;	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
@@ -450,8 +449,7 @@ code,
 kbd,
 tt,
 var {
-	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-}
+	font-family: 'Rubik', sans-serif;}
 
 abbr,
 acronym {
@@ -802,6 +800,10 @@ textarea {
 .custom-logo-link {
 	display: inline-block;
 }
+.custom-logo{
+	width:80px;
+	height: 80px;
+}
 
 /* Captions
 --------------------------------------------- */
@@ -966,4 +968,42 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+.pa-header-menu{
+z-index: 99999;
+}
+#primary-menu a{
+	font-size: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	display: block;
+    padding: 10px 15px;
+	border-radius: 10px;
+	border: 1px dashed transparent;
+	text-decoration: none;
+}
+#primary-menu a:hover{
+	background: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 1px dashed #ddd;
+}
+#pa-page-head{
+	background-color: #fff;
+    position: relative;
+    display: block;
+    margin-top: -26vh;
+    min-height: 50vh;
+    padding-top: 32vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#pa-page-head h1{
+	font-weight: 500;
+    color: #ffffff;
+    letter-spacing: -1px;
+    font-family: "Rubik",sans-serif;
+    text-align: center;
+    font-size: 61px;
 }

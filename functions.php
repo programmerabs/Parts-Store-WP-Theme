@@ -143,6 +143,8 @@ function parts_store_scripts() {
 	wp_enqueue_style( 'parts-store-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'parts-store-style', 'rtl', 'replace' );
 
+	wp_enqueue_style( 'parts-store-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), _S_VERSION );
+	wp_enqueue_script( 'parts-store-bootstrap-bundle', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'parts-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -178,3 +180,58 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Custom Post Type
+function pa_custom_product() {
+
+	$labels = array(
+		'name'                  => _x( 'Products', 'Post Type General Name', 'parts-store' ),
+		'singular_name'         => _x( 'Product', 'Post Type Singular Name', 'parts-store' ),
+		'menu_name'             => __( 'Products', 'parts-store' ),
+		'name_admin_bar'        => __( 'Product', 'parts-store' ),
+		'archives'              => __( 'Product Archives', 'parts-store' ),
+		'attributes'            => __( 'Product Attributes', 'parts-store' ),
+		'parent_item_colon'     => __( 'Parent Product:', 'parts-store' ),
+		'all_items'             => __( 'All Products', 'parts-store' ),
+		'add_new_item'          => __( 'Add New Product', 'parts-store' ),
+		'add_new'               => __( 'Add New Product', 'parts-store' ),
+		'new_item'              => __( 'New Product', 'parts-store' ),
+		'edit_item'             => __( 'Edit Product', 'parts-store' ),
+		'update_item'           => __( 'Update Product', 'parts-store' ),
+		'view_item'             => __( 'View Product', 'parts-store' ),
+		'view_items'            => __( 'View Products', 'parts-store' ),
+		'search_items'          => __( 'Search Product', 'parts-store' ),
+		'not_found'             => __( 'Not found', 'parts-store' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'parts-store' ),
+		'featured_image'        => __( 'Featured Image', 'parts-store' ),
+		'set_featured_image'    => __( 'Set featured image', 'parts-store' ),
+		'remove_featured_image' => __( 'Remove featured image', 'parts-store' ),
+		'use_featured_image'    => __( 'Use as featured image', 'parts-store' ),
+		'insert_into_item'      => __( 'Insert into Product', 'parts-store' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Product', 'parts-store' ),
+		'items_list'            => __( 'Products list', 'parts-store' ),
+		'items_list_navigation' => __( 'Products list navigation', 'parts-store' ),
+		'filter_items_list'     => __( 'Filter Products list', 'parts-store' ),
+	);
+	$args = array(
+		'label'                 => __( 'Product', 'parts-store' ),
+		'description'           => __( 'Product Description', 'parts-store' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'product', $args );
+
+}
+add_action( 'init', 'pa_custom_product', 0 );
