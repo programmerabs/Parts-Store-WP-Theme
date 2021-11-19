@@ -28,36 +28,84 @@ get_header();
 </div>
 </section>
 <div class="container">
-	<div class="row">
-		<div class="col-md-8">
-		<main id="primary" class="site-main">
+ 
+		<main id="primary" class="site-main pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="img-box mb-3">
+                        <?php
 
+                            the_post_thumbnail();
+                        ?>
+                        </div>
+                   
+                    <!-- <div class="p-content ps-3"> -->
+                    <!-- <?php the_content();?> -->
+                    <!-- </div> -->
+                    <div class="pinfolist   p-3">
+                        <div class="row">
+                            <?php 
+                        $entries = get_post_meta( get_the_ID(), 'productinfolistgroup', true );
+                        
+                        foreach ($entries as $key => $entry ) {
+                        
+                            if ( isset( $entry['name'] ) ) {?>
+                            <div class="col-sm-6">
+                                <?php
+                                echo  '<p><img class="iconboximg" src="'.get_template_directory_uri().'/assets/img/check.png">'.$entry['name'].'</p>' ;
+                                ?>
+                            </div>
+                                <?php
+                            }else{
+                                echo '';
+                            }
+                        
+                        }
+                        
+                        ?>
+                            
+                        </div>
+                        
+                        </div>
+                        <div id="supplierr">
+                            <h1>Suppliers</h1>
+                            <div class="row">
 
-        <?php
-// The Query
-$query = new WP_Query(array('post_type' => 'product'));
-query_posts( $query );
+                                <?php
+                            // The Query
+                            $query = new WP_Query(array('post_type' => 'supplier'));
+                            query_posts( $query );
 
-// The Loop
-while ( $query->have_posts() ) : $query->the_post();  
-    the_post_thumbnail();
-endwhile;
+                            // The Loop
+                            while ( $query->have_posts() ) : $query->the_post();  ?>
+                            <div class="col-sm-6 col-md-4 ">
+                                    <div class="sllboximg">
+                                    <?php the_post_thumbnail();?>
+                                    </div>
+                            </div>
+                        <?php  endwhile;
 
-// Reset Query
-wp_reset_query();
-?>
+                            // Reset Query
+                            wp_reset_query();
+                            ?>
+     
+                        </div>
+                              
+ 
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+                </div>
+            </div>
+     
+ 
+
 
 </main>
 		</div>
-		<div class="col-md-4">
-		<?php
-get_sidebar();
-?>
-		</div>
-	</div>
-<!-- #main -->
-
-
-</div>
+ 
 <?php
 get_footer();

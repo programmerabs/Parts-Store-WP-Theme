@@ -1,8 +1,8 @@
 /*!
 Theme Name: Parts Store
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
+Theme URI: https://techdsf.com/
+Author: Thinkwithabs
+Author URI: https://thinkwithabs.com
 Description: Description
 Version: 1.0.0
 Tested up to: 5.4
@@ -14,12 +14,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
-
-Parts Store is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+ 
 */
 
 /*--------------------------------------------------------------
@@ -1006,4 +1001,158 @@ z-index: 99999;
     font-family: "Rubik",sans-serif;
     text-align: center;
     font-size: 61px;
+}
+.iconboximg{
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+
+	
+}
+.pinfolist p{
+	font-size: 20px;
+    margin-bottom: 7px;
+	font-weight: 400;
+	color: #545667;
+}
+.img-box img{
+	border-radius: 15px;
+    padding: 15px;
+    width: 100%!important;
+    border: 1px dashed #ddd;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.sllboximg img{
+	height: 137px;
+    padding: 30px;
+    margin-bottom: 16px;
+	border-radius: 15px;
+    padding: 15px;
+    border: 1px dashed #ddd;
+    object-fit: cover;
+    object-position: center;
+
+}
+#supplierr{
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+#supplierr h1{
+	font-size: 30px;
+	font-weight: 500;
+	color: #545667;
+	margin-bottom: 10px;
+}
+footer {
+    clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
+    color: #fff;
+    padding: 50px 0;
+    margin-top: 18vh;
+    background: #fbfbfb;
+    background: rgb(1,17,100);
+    background: linear-gradient(
+128deg, rgba(1,17,100,1) 0%, rgba(0,0,0,1) 100%);
+}
+.wp-block-column:not(:first-child) {
+    margin-left: 0;
+}
+.footer-top{
+	margin-top: 60px;
+}
+.footer-top ul{
+	margin:0;
+	padding: 0;
+}
+.footer-top li{
+	list-style-type:   none;
+}
+.footer-top li a{
+	text-decoration: none;
+    font-size: 16px;
+    color: #fff !important;
+}
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 37px;
+    border-top: 2px dashed rgba(255, 255, 255, 0.12156862745098039);
+}
+.f-page-products-item{
+    padding: 10px 0;
+    margin-bottom:20px;
+	position: relative;
+}
+.f-page-products-item figure img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px dashed #eaeff9;
+}
+.f-page-products-item figure figcaption{
+    background: red;
+    padding: 20px;
+    margin-top: -30px;
+}
+.f-page-products-item figure figcaption {
+    background: rgb(1,17,100);
+    background: linear-gradient(128deg, rgba(1,17,100,1) 0%, rgba(0,0,0,1) 100%);
+    padding: 9px;
+    margin-top: -46px;
+    padding-left: 24px;
+    z-index: 1;
+    position: absolute;
+    width:70%;
+    border-radius: 0 20px 20px 20px;
+    color: #fff;
+    opacity: 0.9;
+    transition: all .4s;
+}
+.f-page-products-item figure figcaption b {
+    font-size: 17px;
+    padding-bottom: 4px;
+    display: block;
+    font-weight: 400;
+    transition: all .4s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.f-page-products-item figure figcaption p{
+    display: none;
+    transition: all .4s;
+
+}
+.f-page-products-item figure:hover figcaption p{
+    transition: all .4s;
+    display: block;
+}
+.f-page-products-item figure:hover figcaption{
+    transition: all .4s;
+    margin-top: -116px;
+}
+.f-page-products-item figure:hover figcaption b{
+    font-weight: 600;
+}
+ .supplier-logo{
+	 margin: 0;
+	 padding: 0;
+ }
+ 
+.supplier-logo li {
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+	width: 19%;
+}
+.supplier-logo li img{
+	height: 200px;
+    padding: 30px;
+    margin-bottom: 16px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }

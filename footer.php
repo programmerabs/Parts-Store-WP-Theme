@@ -11,19 +11,37 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'parts-store' ) ); ?>">
+	<footer class="site-footer">
+	<div class="container">
+		<div class="footer-top">
+			
+				<div class="row">
+					<div class="col-md-3">
+						<?php echo dynamic_sidebar('footer-w-1')?>
+					</div>
+					<div class="col-md-6">
+						<?php echo dynamic_sidebar('footer-w-2')?>
+					</div>
+					<div class="col-md-3">
+						<?php echo dynamic_sidebar('footer-w-3')?>
+					</div>
+				</div>
+			</div>
+		
+		<div class="footer-bottom">
+			<a style="text-decoration: none;color:#fff" href="<?php echo esc_url( __( 'https://techdsf.com/', 'parts-store' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'parts-store' ), 'WordPress' );
+				printf( esc_html__( 'copyright &copy; 2021 123.com', 'parts-store' ) );
 				?>
 			</a>
 			<span class="sep"> | </span>
+				<span style="margin-right: auto ;">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'parts-store' ), 'parts-store', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+				printf( esc_html__( 'Develop by Techdsf', 'parts-store' ) );
+				?></span>
+		</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

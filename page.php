@@ -28,8 +28,7 @@ get_header();
 </div>
 </section>
 <div class="container">
-	<div class="row">
-		<div class="col-md-8">
+ 
 		<main id="primary" class="site-main">
 
 
@@ -49,13 +48,7 @@ endwhile; // End of the loop.
 ?>
 
 </main>
-		</div>
-		<div class="col-md-4">
-		<?php
-get_sidebar();
-?>
-		</div>
-	</div>
+		 
 <!-- #main -->
 
 
