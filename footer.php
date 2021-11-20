@@ -11,18 +11,19 @@
 
 ?>
 
+
 	<footer class="site-footer">
 	<div class="container">
 		<div class="footer-top">
 			
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 p-3" style="margin-top:-35px">
 						<?php echo dynamic_sidebar('footer-w-1')?>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 p-3">
 						<?php echo dynamic_sidebar('footer-w-2')?>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 p-3">
 						<?php echo dynamic_sidebar('footer-w-3')?>
 					</div>
 				</div>

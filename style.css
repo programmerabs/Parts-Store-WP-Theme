@@ -61,7 +61,7 @@ Use it to make something cool, have fun, and share what you've learned.
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,500&display=swap');
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -75,6 +75,7 @@ html {
  */
 body {
 	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 /**
@@ -399,7 +400,8 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: 'Rubik', sans-serif;	font-size: 1rem;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -409,6 +411,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'Ubuntu', sans-serif;
 	clear: both;
 }
 
@@ -977,6 +980,43 @@ z-index: 99999;
 	border: 1px dashed transparent;
 	text-decoration: none;
 }
+#primary-menu .dropdown-menu{
+        background: rgb(1,17,100);
+    background: linear-gradient(
+128deg, rgba(1,17,100,1) 0%, rgba(0,0,0,1) 100%);
+    float: left;
+    min-width: 160px;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    border: none;
+    border-radius: 0;
+    top:100%;
+}
+#primary-menu .dropdown-menu a{
+    display: block;
+    padding: 11px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+    background: #08153e;
+    text-transform:capitalize;
+    border-radius:0;
+}
+#primary-menu .dropdown-menu li{
+   border-bottom: 1px dashed #fff; 
+}
+#primary-menu .dropdown-menu a:hover{
+   background: #353971;
+   color: #fff; 
+   border-radius:0;
+}
+
+    
 #primary-menu a:hover{
 	background: transparent;
     border-radius: 10px;
@@ -1155,4 +1195,59 @@ footer {
     display: block;
     margin: 0 auto;
     text-align: center;
+}
+
+/*contact from */
+.fmtitle h3{
+    font-size: 22px;
+    font-family: "Rubik",sans-serif;
+    font-weight: 100;
+    margin-top: 14px;
+    display: block;
+    border-left: 1px solid #ddd;
+    padding-left: 19px;
+    /* margin: 0; */
+    color: #393b73;
+}
+.wpcf7{
+    background: white;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    padding:15px;
+}
+.wpcf7 label{
+    font-size: 12px;
+    font-weight: 600;
+    color: #6e718a;
+    text-transform: uppercase;
+}
+.wpcf7-submit{
+    background: #89599a;
+    color: #fff!important;
+    padding: 14px 20px !important;
+    border-radius: 30px !important;
+    border: none !important;
+    margin-top: 20px;
+    width:100%;
+    font-weight: 800;
+    background: rgb(1,17,100);
+    background: linear-gradient(
+128deg, rgba(1,17,100,1) 0%, rgba(0,0,0,1) 100%) !important;
+}
+.wpcf7 .form-control {
+    border:none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    color: #6e718a;
+    height: 28px;
+}
+.whappconta{
+    position:fixed;
+    bottom:15px;
+    opacity:999999;
+    right:0;
+}
+#qlwapp .qlwapp-container {
+    
+    display: none !important;
 }

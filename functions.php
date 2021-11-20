@@ -103,6 +103,10 @@ if ( ! function_exists( 'parts_store_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'parts_store_setup' );
+function register_navwalker(){
+	require_once get_template_directory() . '/lib/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -353,4 +357,4 @@ function pa_supplier_the_shortcode_func() {
 add_shortcode( 'pa_supplier_list', 'pa_supplier_the_shortcode_func' );
 
 // require_once(__DIR__.'./lib/cmb2/init.php');
-require_once(__DIR__.'./lib/cmb2/example-functions.php');
+require_once(__DIR__.'/lib/cmb2/example-functions.php');

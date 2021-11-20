@@ -14,6 +14,7 @@
 
 get_header();
 ?>
+<?php if (  !is_front_page() ){?>
 <section id="pa-page-head" style="background: url(<?php if(get_header_image()){
 		header_image();
 	}else{
@@ -27,6 +28,8 @@ get_header();
 	</div>
 </div>
 </section>
+<?php }else{?>
+<?php }?>
 <div class="container">
  
 		<main id="primary" class="site-main">

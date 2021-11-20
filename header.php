@@ -36,10 +36,13 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
+					'depth'          => 2,
 					'menu_id'        => 'primary-menu',
 					"menu_class"			=> 'navbar-nav ms-auto',
 					'container'		 => 'div',
 					'container_class'=> 'collapse navbar-collapse',
+					'fallback_cb'     => '__return_false',
+                    'walker' => new bootstrap_5_wp_nav_menu_walker()
 					
 				)
 			);

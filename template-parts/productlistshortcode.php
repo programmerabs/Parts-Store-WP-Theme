@@ -1,3 +1,4 @@
+<div class="row">
 <?php
             // The Query
             $query = new WP_Query(array('post_type' => 'product'));
@@ -35,4 +36,5 @@
             // Reset Query
             wp_reset_query();
             ?>
+            </div>
        

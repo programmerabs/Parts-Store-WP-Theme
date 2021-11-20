@@ -96,7 +96,10 @@ get_header();
                         </div>
                     </div>
                     <div class="col-md-4">
-                        
+                        <div class="fmtitle">
+                        <h3>WIR RUFEN SIE AN</h3>
+                        </div>
+                        <?php echo do_shortcode('[contact-form-7 id="106" title="WIR RUFEN SIE AN"]');?>
                     </div>
                 </div>
             </div>
