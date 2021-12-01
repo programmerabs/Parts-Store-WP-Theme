@@ -17,15 +17,21 @@
 		<div class="footer-top">
 			
 				<div class="row">
+				<?php if ( is_active_sidebar( 'footer-w-1' ) ) : ?>
 					<div class="col-md-3 p-3" style="margin-top:-35px">
 						<?php echo dynamic_sidebar('footer-w-1')?>
 					</div>
+					<?php endif;?>
+					<?php if ( is_active_sidebar( 'footer-w-2' ) ) : ?>
 					<div class="col-md-6 p-3">
 						<?php echo dynamic_sidebar('footer-w-2')?>
 					</div>
+					<?php endif;?>
+					<?php if ( is_active_sidebar( 'footer-w-3' ) ) : ?>
 					<div class="col-md-3 p-3">
 						<?php echo dynamic_sidebar('footer-w-3')?>
 					</div>
+					<?php endif;?>
 				</div>
 			</div>
 		

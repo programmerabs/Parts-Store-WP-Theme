@@ -1251,3 +1251,11 @@ footer {
     
     display: none !important;
 }
+.footer-top .col-md-3::after ,
+.footer-top .col-md-6::after
+{
+    background: #010d49;
+    padding: 10px;
+    content: "";
+    margin-left: -10px;
+}
